@@ -6,15 +6,15 @@ env:
 
 jobs:
   windows_job:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
-      - run: echo 'Hi ${{ env.mascot }}'  # Hi Mona
-      - run: echo 'Hi ${{ env.mascot }}'  # Hi Octocat
+      - run: echo 'Hi ${{ env.mascot }}' 
+      - run: echo 'Hi ${{ env.mascot }}'  
         env:
-          mascot: Octocat
+          mascot: dev1
   linux_job:
     runs-on: ubuntu-latest
     env:
-      mascot: Tux
+      mascot: dev2
     steps:
-      - run: echo 'Hi ${{ env.mascot }}'  # Hi Tux
+      - run: echo 'Hi ${{ env.mascot }}'  
