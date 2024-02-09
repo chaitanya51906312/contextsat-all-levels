@@ -2,19 +2,18 @@ name: Hi context
 on: push
 env:
   mascot: mxdr-cust-dev
-  super_duper_var: totally_awesome
-
+  
 jobs:
   windows_job:
     runs-on: ubuntu-latest
     steps:
       - run: echo 'Hi ${{ env.mascot }}' 
-      - run: echo 'Hi ${{ env.mascot }}'  
+      - run: echo 'Hi ${{ env.stepenv }}'  
         env:
-          mascot: dev1
+          stepenv: dev1
   linux_job:
     runs-on: ubuntu-latest
     env:
-      mascot: dev2
+      jobenv: dev2
     steps:
-      - run: echo 'Hi ${{ env.mascot }}'  
+      - run: echo 'Hi ${{ env.jobenv }}'  
