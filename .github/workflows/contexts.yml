@@ -1,7 +1,7 @@
 name: Hi context
 on: push
 env:
-  mascot: Mona
+  mascot: mxdr-cust-dev
   super_duper_var: totally_awesome
 
 jobs:
